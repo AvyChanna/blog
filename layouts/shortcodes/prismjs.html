@@ -4,13 +4,11 @@
 {{ else }}
 {{ if .IsNamedParams }}
 <pre class="
-	{{- if .Get "lang" }}language-{{ .Get "lang" }}{{ end }}
-	line-numbers
-	diff-highlight
-	{{- if .Get "command-line" }} command-line{{ end }}" {{- /* line highlight plugin */ -}} {{- if .Get "line" }}
-	data-line="{{ .Get "line" }}" {{ end }} {{- if .Get "start" }} data-start="{{ .Get "start" }}" {{else}}
-	data-start="1" {{ end }} {{- /* command-line plugin */ -}} {{- if .Get "user" }} data-user="{{ .Get "user" }}"
-	{{ end }} {{- if .Get "host" }} data-host="{{ .Get "host" }}" {{ end }} {{- if .Get "prompt" }}
+	{{- if .Get "lang" }}language-{{ .Get "lang" }}{{ end }} line-numbers diff-highlight {{- if .Get "command-line" }} command-line{{ end }}"
+	{{- /* line highlight plugin */ -}} {{- if .Get "line" }} data-line="{{ .Get "line" }}" {{ end }}
+	{{- if .Get "start" }} data-start="{{ .Get "start" }}" {{else}} data-start="1" {{ end }}
+	{{- /* command-line plugin */ -}} {{- if .Get "user" }} data-user="{{ .Get "user" }}" {{ end }}
+	{{- if .Get "host" }} data-host="{{ .Get "host" }}" {{ end }} {{- if .Get "prompt" }}
 	data-prompt="{{ .Get "prompt" }}" {{ end }} {{- if .Get "output" }} data-output="{{ .Get "output" }}"
 	{{ end }}><code {{ if .Get "lang" }}class="language-{{ .Get "lang" }} diff-highlight"{{ end }}>{{ $inner }}</code></pre>
 {{ else }}

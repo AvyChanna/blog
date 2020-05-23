@@ -20,7 +20,7 @@ draft = false
 
 Sample AES code
 
-```python
+{{<prismjs lang="python">}}
 # Pycryptodome
 from functools import reduce
 from getpass import getpass
@@ -47,4 +47,4 @@ else:
     buffer = pad(buffer, 32)
     cipher = AES.new(key, AES.MODE_EAX, b'0123456789abcdef')
     print(f"ciphertext = {cipher.encrypt(buffer).hex()} , Keep it safe")
-```
+{{</prismjs>}}
