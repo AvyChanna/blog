@@ -1,21 +1,14 @@
 +++
 title = "Test Post"
 date = "2020-05-10T23:25:21+05:30"
-description = "This is just a test post"
+description = "This is a test post"
 summary = "Test Test Test"
 cover = "img/digits.png"
 coveralt = "a test image shamelessly copied from opencv tests/docs"
 tags = ['test', 'a', 'v', 'y']
 keywords = ['test']
 draft = false
-[image]
-    src = ""
-[ogp]
-    title = "Test Post"
-    url = ""
-    description = "This is just a test post"
-    image = ""
-    site = ""
+katex = false
 +++
 
 ## TEST

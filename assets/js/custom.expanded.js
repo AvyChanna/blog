@@ -1,4 +1,5 @@
 ! function () {
+
 	const container = document.querySelector(".container")
 	const menu = document.querySelector(".menu")
 	const mobileMenuTrigger = document.querySelector(".menu-trigger")

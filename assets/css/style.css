@@ -51,7 +51,8 @@ body {
 	src: local('Fira Code Regular'),
 		local('FiraCode-Regular'),
 		url("/fonts/woff2/FiraCode-Regular.woff2") format('woff2'),
-		url("/fonts/woff/FiraCode-Regular.woff") format("woff");
+		url("/fonts/woff/FiraCode-Regular.woff") format("woff"),
+		url("/fonts/ttf/FiraCode-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap
@@ -62,7 +63,8 @@ body {
 	src: local('Fira Code Bold'),
 		local('FiraCode-Bold'),
 		url("/fonts/woff2/FiraCode-Bold.woff2") format('woff2'),
-		url("/fonts/woff/FiraCode-Bold.woff") format("woff");
+		url("/fonts/woff/FiraCode-Bold.woff") format("woff"),
+		url("/fonts/ttf/FiraCode-Bold.ttf") format("truetype");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap
@@ -749,12 +751,14 @@ hr {
 .post-content {
 	margin-top: 30px
 }
-.post-cover-list{
+
+.post-cover-list {
 	width: auto;
 	height: auto;
 	max-width: 100%;
 	max-height: 300px;
 }
+
 .post-cover {
 	border: 15px solid var(--accent);
 	background: transparent;

@@ -8,14 +8,8 @@ coveralt = ""
 tags = ["python"]
 keywords = []
 draft = false
-[image]
-    src = ""
-[ogp]
-    title = ""
-    url = ""
-    description = ""
-    image = ""
-    site = ""
+katex = false
+mermaid=true
 +++
 
 Sample AES code

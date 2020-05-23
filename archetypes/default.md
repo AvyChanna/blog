@@ -8,12 +8,5 @@ coveralt = ""
 tags = []
 keywords = []
 draft = true
-[image]
-    src = ""
-[ogp]
-    title = ""
-    url = ""
-    description = ""
-    image = ""
-    site = ""
+katex= false
 +++
