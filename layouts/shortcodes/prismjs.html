@@ -11,11 +11,11 @@
 	data-line="{{ .Get "line" }}" {{ end }} {{- if .Get "start" }} data-start="{{ .Get "start" }}" {{else}}
 	data-start="1" {{ end }} {{- /* command-line plugin */ -}} {{- if .Get "user" }} data-user="{{ .Get "user" }}"
 	{{ end }} {{- if .Get "host" }} data-host="{{ .Get "host" }}" {{ end }} {{- if .Get "prompt" }}
-	data-prompt="{{ .Get "prompt" }}" {{ end }} {{- if .Get "output" }} data-output="{{ .Get "output" }}" {{ end }}>
-	<code {{ if .Get "lang" }}class="language-{{ .Get "lang" }} diff-highlight"{{ end }}>{{ $inner }}</code></pre>
+	data-prompt="{{ .Get "prompt" }}" {{ end }} {{- if .Get "output" }} data-output="{{ .Get "output" }}"
+	{{ end }}><code {{ if .Get "lang" }}class="language-{{ .Get "lang" }} diff-highlight"{{ end }}>{{ $inner }}</code></pre>
 {{ else }}
-<pre class="language-{{ .Get 0 }} diff-highlight">
-      <code class="language-{{ .Get 0 }} diff-highlight">{{ $inner }}</code></pre>
+<pre
+	class="language-{{ .Get 0 }} diff-highlight"><code class="language-{{ .Get 0 }} diff-highlight">{{ $inner }}</code></pre>
 {{ end }}
 {{ end }}
 

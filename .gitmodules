@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/AvyChanna/AvyChanna.github.io.git
+	branch = master
