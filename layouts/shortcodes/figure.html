@@ -1,0 +1,15 @@
+{{ if .Get "src" }}
+{{ $image := resources.Get (.Get "src")}}
+{{ $image := $image.Fit $.Site.Params.maxImageSize }}
+<figure class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}">
+	<img src="{{ $image.Permalink }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ with .Get "style" }}
+		style="{{ . | safeCSS }}" {{ end }} />
+	{{ if .Get "caption" }}
+	<figcaption class="{{ with .Get "captionPosition"}}{{ . }}{{ else -}} center {{- end }}"
+		{{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" }}</figcaption>
+	{{ end }}
+</figure>
+{{ end }}
+
+<!-- <figure src="" position="" alt = "" style=""
+	caption="" captionPosition="" captionStyle="" /> -->

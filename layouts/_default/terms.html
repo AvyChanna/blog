@@ -1,0 +1,10 @@
+{{ define "main" }}
+<ul class="post">
+	{{ range .Data.Terms }}
+	{{ $plural := cond (gt .Count 1) "posts" "post"}}
+	<a href="{{ .Page.Permalink }}" class="taxonomy-tags">
+		#{{ .Page.Title }} ({{ .Count }} {{ $plural }})
+	</a>
+	{{ end }}	
+</ul>
+{{ end }}

@@ -1,0 +1,10 @@
+<footer class="footer">
+	<div class="footer__inner">
+		<a class="go-to-top" href="javascript:void(0);" onclick="window.scroll(0,0);">Back to Top</a>
+	</div>
+</footer>
+{{ $menu := resources.Get "js/menu.js" }}
+{{ $prism := resources.Get "js/prism.js" }}
+{{ $js := (slice $menu $prism)| resources.Concat "js/bundle.js" | minify | fingerprint }}
+{{ $jsIntegrity := $js | resources.Fingerprint "sha512" }}
+<script async src="{{ $js.Permalink }}" integrity="{{ $jsIntegrity.Data.Integrity }}" id="main-js"></script>

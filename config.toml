@@ -1,0 +1,72 @@
+baseurl = "/"
+languageCode = "en-us"
+languageName = "English"
+paginate = 5
+title = "Bits & Pieces"
+copyright = "&copy; Avneet Singh"
+languageDirection = "ltr"
+canonifyURLs = true
+enableEmoji = true
+[author]
+  name = "Avneet Singh"
+  email = "aschanna123@gmail.com"
+[params]
+  keywords = "mathematics, programming, algorithms, number theory, cryptography, modular arithmetic"
+  subtitle = "Shower Thoughts on maths and programming"
+  showMenuItems = 3
+  contentTypeName = "posts"
+  maxImageSizeSingle = "1280x720"
+  maxImageSizeList = "1280x300"
+
+# This is a todo
+#[params.csp]
+#  childsrc = ["'self'"]
+#  fontsrc = ["'self'"]
+#  formaction = ["'self'"]
+#  framesrc = ["'self'"]
+#  imgsrc = ["'self'"]
+#  objectsrc = ["'self'"]
+#  stylesrc = ["'self'"]
+#  scriptsrc = ["'self'"]
+
+
+[params.logo]
+  logoText = "Bits & Pieces"
+  logoHomeLink = "/"
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags"
+  weight = 2
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about"
+  weight = 3
+[taxonomies]
+  tag = "tags"
+[minify]
+  minifyOutput = true
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+# This is a todo
+#[server]
+#  [[server.headers]]
+#    for = "/**.html"
+#    [server.headers.values]
+#      Content-Security-Policy = "script-src localhost:1313"
+#      Referrer-Policy = "strict-origin-when-cross-origin"
+#      X-Content-Type-Options = "nosniff"
+#      X-Frame-Options = "DENY"
+#      X-XSS-Protection = "1; mode=block"
