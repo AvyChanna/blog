@@ -9,4 +9,5 @@ tags = []
 keywords = []
 draft = true
 katex= false
+mermaid = false
 +++

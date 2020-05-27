@@ -9,6 +9,7 @@ tags = ['test', 'a', 'v', 'y']
 keywords = ['test']
 draft = false
 katex = false
+mermaid = false
 +++
 
 ## TEST

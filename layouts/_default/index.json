@@ -1,10 +1,5 @@
-{{ $.Scratch.Add "index" slice }}
+{{ $ind := slice }}
 {{ range (where .Site.RegularPages "Type" $.Site.Params.contentTypeName) }}
-	{{ $RemoveHTML := htmlUnescape .Plain}}
-	{{ $RemoveEscapes := plainify $RemoveHTML}}
-	{{ $RemoveSymbols := replaceRE "[^\\w\\d]+" " " $RemoveEscapes}}
-	{{ $TrimContent := trim $RemoveSymbols " "}}
-	{{ $UsableContent :=  lower $TrimContent }}
-	{{ $.Scratch.Add "index" (dict "title" .Title "subtitle" .Params.Subtitle "description" .Params.description "tags" .Params.tags "image" .Params.image "content" $UsableContent "permalink" .Permalink )}}
+	{{ $ind = $ind | append (dict "title" .Title "subtitle" .Params.Subtitle "description" .Params.description "tags" .Params.tags "image" .Params.image "content" .Plain "permalink" .Permalink )}}
 {{ end }}
-{{ $.Scratch.Get "index" | jsonify }}
+{{$ind | jsonify}}

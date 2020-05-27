@@ -9,7 +9,7 @@
 {{ $jsIntegrity := $js | resources.Fingerprint "sha512" }}
 <script async defer src="{{ $js.Permalink }}" integrity="{{ $jsIntegrity.Data.Integrity }}"></script>
 
-{{ if .Params.mathjax }}
+{{ if .Params.katex }}
 {{ $katex := resources.Get "js/katex.js" | minify | fingerprint }}
 {{ $katexIntegrity := $katex | resources.Fingerprint "sha512" }}
 <script async defer src="{{ $katex.Permalink }}" integrity="{{ $katexIntegrity.Data.Integrity }}"></script>

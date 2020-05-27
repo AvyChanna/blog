@@ -1275,3 +1275,7 @@
 .katex-display.fleqn>.katex {
 	text-align: left
 }
+
+.katex {
+	white-space: nowrap;
+}

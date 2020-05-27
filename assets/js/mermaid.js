@@ -33916,7 +33916,7 @@
 							}]).default
 			})); mermaid.initialize({
 			startOnLoad: true,
-			theme: "dark",
+			theme: "default",
 			securityLevel: 'loose',
 			fontFamily: "'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace",
 		});
