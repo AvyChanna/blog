@@ -1,0 +1,17 @@
+{{ $htmlTable := .Inner | markdownify }}
+<!-- namedparams -->
+{{ $class := printf "table-style-%s" (.Get "class") }}
+{{ $widths :=  split (.Get "width") ","}}
+
+{{ $sty1 := "" }}
+{{ $i := 1}}
+{{ range  $widths }}
+	{{$sty1 = printf "%s\n#%s table th:nth-of-type(%d){width:%s}" $sty1 $class $i (trim . " \t\n\r\f\v")}}
+	{{ $i = add $i 1 }}
+{{end}}
+<div id="{{$class}}">
+	{{ $htmlTable | safeHTML }}
+</div>
+<style>
+	{{$sty1 | safeCSS}}
+</style>

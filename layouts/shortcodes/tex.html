@@ -1,0 +1,6 @@
+{{ $delim := "$"}}
+{{ $inner := .Inner}}
+{{ if in .Params "display" }}
+	{{ $delim = "$$"}}
+{{end}}
+{{ printf "%s%s%s" $delim $inner $delim}}
