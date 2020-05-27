@@ -447,8 +447,12 @@ body {
 	margin-top: 40px
 }
 
-.headings--one-size h1,
-.headings--one-size h2,
+.headings--one-size h1{
+	font-size: 1.8rem
+}
+.headings--one-size h2{
+	font-size: 1.6rem
+}
 .headings--one-size h3 {
 	font-size: 1.4rem
 }
