@@ -443,7 +443,8 @@ body {
 .headings--one-size h4:not(first-child),
 .headings--one-size h5:not(first-child),
 .headings--one-size h6:not(first-child) {
-	margin-top: 40px
+	padding-top: 75px;
+	padding-bottom: 25px;
 }
 
 .headings--one-size h1 {
@@ -653,20 +654,12 @@ ol ol {
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
-	max-width: 864px;
+	max-width: 100%;
 	/* min-height: 100vh; */
-	border-right: 1px solid hsla(0, 0%, 100%, .1)
-}
-
-.container.center,
-.container.full {
 	border: none;
-	margin: 0 auto
+	margin: 0 auto;
 }
 
-.container.full {
-	max-width: 100%
-}
 
 @media (max-width:683px) {
 	.container {
@@ -1312,34 +1305,19 @@ pre[data-line] {
 	text-align: center
 }
 
-/* 
-.toc .toctitle {
-	text-align: center
-}
-
-.toc ul {
-	list-style-type: none;
-	list-style-image: none;
-	margin-left: 0;
-	padding: 0;
-	text-align: left
-}
-
-.toc ul ul {
-	margin: 0 0 0 2em
-} */
 #toc_container {
 	background: var(--background);
 	float: right;
-	width: 40%;
+	width: 35%;
 	font-size: 0.8em;
 	padding: 1em 2em;
-	margin: 0 0 0.5em 0.5em;
-	border:var(--border)
+	margin: 0 0 1em 1em;
+	border: var(--border)
 }
+
 #toc_container ul {
 	padding: 0;
-	margin-top: 0;
+	margin-top: 0
 }
 
 #toc_container li {
@@ -1352,10 +1330,11 @@ pre[data-line] {
 
 #toc_container a:hover,
 #toc_container a:active {
-	text-decoration: underline;
+	text-decoration: underline
 }
 
 .toc_title {
 	font-weight: 700;
-	text-align: center;
+	margin-bottom: 10px;
+	text-align: center
 }

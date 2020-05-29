@@ -1,0 +1,21 @@
+{
+	"name": "custom-pipeline",
+	"version": "0.1.0",
+	"description": "Minify HTML/CSS/JS",
+	"author": "Avneet Singh",
+	"devDependencies": {
+		"del": "latest",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-csso": "latest",
+		"gulp-htmlmin": "latest",
+		"gulp-sass": "latest",
+		"gulp-uglify": "latest",
+		"run-sequence": "latest",
+		"gulp-dom": "latest",
+		"katex": "latest"
+	},
+	"engines": {
+		"node": ">=12.17.0"
+	}
+}

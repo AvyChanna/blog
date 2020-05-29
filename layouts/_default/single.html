@@ -24,11 +24,13 @@
 	<img src="{{ $image.Permalink }}" class="post-cover" alt="{{ $altText | plainify }}" />
 	{{ end}}
 	<div class="post-content">
+		{{ if .Params.toc }}
 		<div id="toc_container">
 			<p class="toc_title">On this Page</p>
 			<hr><br>
 			{{ .TableOfContents }}
 		</div>
+		{{ end }}
 		{{- with .Content -}}
 		<div>
 			{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}

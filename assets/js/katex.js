@@ -8732,5 +8732,6 @@ renderMathInElement(document.body, {
 			display: false
 		},
 	],
+	output:"html",
 	ignoredClasses:["mermaid"]
 });

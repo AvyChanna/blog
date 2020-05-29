@@ -1,3 +1,4 @@
+/node_modules/
 /ignore/
 ### Hugo ###
 /resources/_gen/
@@ -38,3 +39,4 @@ tags
 
 # Coc configuration directory
 .vim
+node_modules
