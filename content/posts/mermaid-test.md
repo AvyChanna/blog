@@ -14,7 +14,7 @@ mermaid = true
 
 Dual_EC_DRBG State Diagram
 
-{{<mermaid center>}}
+{{<mermaid>}}
 stateDiagram-v2
 	state "Internal-State = s" as s
 	state "Next-State = t" as t

@@ -214,8 +214,6 @@ a.read-more:hover {
 }
 
 .header .menu {
-
-
 	margin: 20px 0
 }
 
@@ -415,8 +413,9 @@ body {
 	color: var(--color);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	-webkit-font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl", "calt";
-	font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl", "calt";
+	-webkit-font-feature-settings: "ss01", "ss04", "ss06", "zero", "calt", "tnum", "liga";
+	-moz-font-feature-settings: "ss01", "ss04", "ss06", "zero", "calt", "tnum", "liga";
+	font-feature-settings: "ss01", "ss04", "ss06", "zero", "calt", "tnum", "liga";
 	-webkit-font-variant-ligatures: contextual;
 	font-variant-ligatures: contextual;
 	-webkit-overflow-scrolling: touch;
@@ -447,12 +446,14 @@ body {
 	margin-top: 40px
 }
 
-.headings--one-size h1{
+.headings--one-size h1 {
 	font-size: 1.8rem
 }
-.headings--one-size h2{
+
+.headings--one-size h2 {
 	font-size: 1.6rem
 }
+
 .headings--one-size h3 {
 	font-size: 1.4rem
 }
@@ -601,9 +602,16 @@ table {
 }
 
 table,
-td,
-th {
-	border: 1px dashed var(--accent);
+table th {
+	border: 2px solid var(--accent);
+	padding: 10px
+}
+
+table td {
+	border-top: 1px dotted var(--accent);
+	border-bottom: 1px dotted var(--accent);
+	border-left: 2px solid var(--accent);
+	border-right: 2px solid var(--accent);
 	padding: 10px
 }
 
@@ -1298,4 +1306,56 @@ pre[data-line] {
 	-moz-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out
+}
+
+.mermaid {
+	text-align: center
+}
+
+/* 
+.toc .toctitle {
+	text-align: center
+}
+
+.toc ul {
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 0;
+	padding: 0;
+	text-align: left
+}
+
+.toc ul ul {
+	margin: 0 0 0 2em
+} */
+#toc_container {
+	background: var(--background);
+	float: right;
+	width: 40%;
+	font-size: 0.8em;
+	padding: 1em 2em;
+	margin: 0 0 0.5em 0.5em;
+	border:var(--border)
+}
+#toc_container ul {
+	padding: 0;
+	margin-top: 0;
+}
+
+#toc_container li {
+	margin: 0 0 0.25em 0;
+}
+
+#toc_container a {
+	text-decoration: none;
+}
+
+#toc_container a:hover,
+#toc_container a:active {
+	text-decoration: underline;
+}
+
+.toc_title {
+	font-weight: 700;
+	text-align: center;
 }

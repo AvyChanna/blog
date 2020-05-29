@@ -9,13 +9,14 @@ draft = false
 katex = true
 +++
 
-A beginner friendly primer on select algorithms in number theory.
+A beginner friendly explaination of some select algorithms in number theory.
+This is, by no means, a complete/detailed post. For more information on these algorithms, consult a source like [Wikipedia](https://www.wikipedia.org)
 
-# Greatest Common Divisor
+## Greatest Common Divisor
 
 GCD (also called HCF) finds common divisors of 2 numbers. 
 
-> **Shortcut** - $ gcd(a,b) = gcd(a\\%b, b) $.
+> **Shortcut** -> $ gcd(a,b) = gcd(a\\%b, b) $.
 
 The following is an implementation of Euclidean Algorithm.
 
@@ -32,8 +33,8 @@ def gcd(x, y):
 
 We use divison lemma $a = bq+r$. In next iteration, put $a = b$ and $b = r$ and repeat till $r = 0$.
 
-Let us define 2 sequences $\{q_i\}$, $\{r_i\}$, such that $r_{i-2} = r_{i-1}q_{i}+r_i$
-$\{r_i\}$ is the squence of remainders in integer division, with $r_{0}=a$ and $r_{1}=b$ as our initial conditions.
+Let us define 2 sequences $\\{q_i\\}$, $\\{r_i\\}$, such that $r_{i-2} = r_{i-1}q_{i}+r_i$, where
+$\\{r_i\\}$ is the squence of remainders in integer division, with $r_{0}=a$ and $r_{1}=b$ as our initial conditions.
 
 We iterate this seqence $i$ times till we reach $r_{i-1} = 0$. The term $r_{i-2}$ is the required GCD.
 
@@ -47,13 +48,13 @@ We iterate this seqence $i$ times till we reach $r_{i-1} = 0$. The term $r_{i-2}
 | $ 22 = 5 \times  4 +  2$ | $ 4$ | $ 2$ |
 | $  4 = 2 \times  2 +  0$ | $ 2$ | $ 0$ |
 {{</table>}}
-Here, $\{r_i\} = \{100, 26, 22, 4, 2, 0\}$ and $\{q_i\} = \{3, 1, 5, 2\}$.
+Here, $\\{r_i\\} = \\{100, 26, 22, 4, 2, 0\\}$ and $\\{q_i\\} = \\{3, 1, 5, 2\\}$.
 
 Note that, $gcd(a,b) = gcd(r_0,r_1) = gcd(r_1,r_2) = ... = gcd(r_{-3},r_{i-2})$ and $gcd(r_{i-1}) = 0$
 
 So, $gcd(100, 26) = 2$
 
-# B&eacute;zout's identity
+## B&eacute;zout's identity
 
 **Theorem -** for two integers $a$ & $b$, $\exists$ integers $x$ & $y$ such that $ax+by=d$, where $d=gcd(a,b)$
 
@@ -68,14 +69,14 @@ Convince yoursef. Hint - {{<spoiler>}}Let $ax_0+by_0=0$ be for some $(x_0,y_0)$.
 
 > **Shortcut** - If $gcd(n_1,n_2) = 1$, then $x \equiv n_{1}^{-1} (mod~n_2)$ and $y \equiv n_{2}^{-1} (mod~n_1)$
 
-# Extended Euclidean Algorithm
+## Extended Euclidean Algorithm
 
 This is an extension of [Euclidean Algorithm](#greatest-common-divisor), which also provides B&eacute;zout coefficients along with the GCD.
 
 It also uses Euclidean algorithm, but also finds r as a linear combination of $a$ and $b$
 
-Let us define 4 sequences $\{q_i\}$, $\{r_i\}$, $\{x_i\}$, $\{y_i\}$.
-The sequences $\{q_i\}$, $\{r_i\}$ are the same ones from Euclidean Algorithm,
+Let us define 4 sequences $\\{q_i\\}$, $\\{r_i\\}$, $\\{x_i\\}$, $\\{y_i\\}$.
+The sequences $\\{q_i\\}$, $\\{r_i\\}$ are the same ones from Euclidean Algorithm,
 that is, $r_{i-2} = r_{i-1}q_{i}+r_i$, $r_0=a$, $r_1=b$, $r_{i-1} = 0$ for some i.
 We also need to write $r_i$ as linear combination of $a$ and $b$, such that $r_i = x_ia+y_ib$
 
@@ -102,7 +103,7 @@ def egcd(a, b):
 	return b, new_x, new_y
 {{</prismjs>}}
 
-# Chinese Remainder Theorem
+## Chinese Remainder Theorem
 
 Theorem - Given $n_1, n_2, ... , n_i$ pairwise co-prime positive integers (all numbers are co-prime to each other), with $N$ = product of all $n_i$, and $a_1, a_2, ... , a_i$ integers with $0 \le a_i \lt n_i$ for each $i$, then there is one and only one positive integer $x$ in $0 \le x \lt N$, such that remainder of integer divison of $x$ by $n_j$ is $a_j$ for every j.
 

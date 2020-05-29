@@ -17,7 +17,6 @@
 		{{ end }}
 	</span>
 	{{ end }}
-
 	{{ if .Params.cover }}
 	{{ $image := resources.Get .Params.cover}}
 	{{ $image := $image.Fit $.Site.Params.maxImageSizeSingle }}
@@ -25,6 +24,11 @@
 	<img src="{{ $image.Permalink }}" class="post-cover" alt="{{ $altText | plainify }}" />
 	{{ end}}
 	<div class="post-content">
+		<div id="toc_container">
+			<p class="toc_title">On this Page</p>
+			<hr><br>
+			{{ .TableOfContents }}
+		</div>
 		{{- with .Content -}}
 		<div>
 			{{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
