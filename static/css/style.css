@@ -7,10 +7,7 @@
 	--tabletWidth: (max-width:900px);
 	--code-margin: 40px;
 	--shadow-color: rgba(33, 32, 44, 0.8);
-	--border: 3px dotted var(--accent);
-	--shadow: 0 10px var(--shadow-color),
-		-10px 10px var(--shadow-color),
-		10px 10px var(--shadow-color)
+	--border: 3px dotted var(--accent)
 }
 
 * {
@@ -222,7 +219,9 @@ a.read-more:hover {
 		position: absolute;
 		background: rgb(33, 32, 44);
 		background: var(--background);
-		box-shadow: var(--shadow);
+		box-shadow: 0 10px var(--shadow-color),
+			-10px 10px var(--shadow-color),
+			10px 10px var(--shadow-color);
 		color: #fff;
 		border: 2px solid;
 		margin: 0;
@@ -301,7 +300,9 @@ a.read-more:hover {
 	position: absolute;
 	background: rgb(33, 32, 44);
 	background: var(--background);
-	box-shadow: var(--shadow);
+	box-shadow: 0 10px var(--shadow-color),
+		-10px 10px var(--shadow-color),
+		10px 10px var(--shadow-color);
 	color: #fff;
 	border: 2px solid;
 	margin: 0;
@@ -352,7 +353,9 @@ a.read-more:hover {
 	position: absolute;
 	background: rgb(33, 32, 44);
 	background: var(--background);
-	box-shadow: var(--shadow);
+	box-shadow: 0 10px var(--shadow-color),
+		-10px 10px var(--shadow-color),
+		10px 10px var(--shadow-color);
 	color: #fff;
 	border: 2px solid;
 	margin: 0;
@@ -1308,7 +1311,7 @@ pre[data-line] {
 #toc_container {
 	background: var(--background);
 	float: right;
-	width: 35%;
+	width: 350px;
 	font-size: 0.8em;
 	padding: 1em 2em;
 	margin: 0 0 1em 1em;
@@ -1337,4 +1340,10 @@ pre[data-line] {
 	font-weight: 700;
 	margin-bottom: 10px;
 	text-align: center
+}
+@media (max-width:899px){
+	#toc_container{
+		float: unset;
+		width:300px;
+	}
 }

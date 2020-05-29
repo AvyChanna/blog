@@ -2,6 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 languageName = "English"
 paginate = 5
+publishDir = "new"
 title = "Bits & Pieces"
 copyright = "&copy; Avneet Singh"
 languageDirection = "ltr"
@@ -17,7 +18,8 @@ enableEmoji = true
   contentTypeName = "posts"
   maxImageSizeSingle = "1280x720"
   maxImageSizeList = "1280x300"
-
+[minify]
+  minifyOutput = true
 # This is a todo
 #[params.csp]
 #  childsrc = ["'self'"]
@@ -51,8 +53,6 @@ enableEmoji = true
   weight = 3
 [taxonomies]
   tag = "tags"
-[minify]
-  minifyOutput = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "RSS"]

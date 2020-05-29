@@ -3,20 +3,11 @@
 		<a class="go-to-top" href="javascript:void(0);" onclick="window.scroll(0,0);">Back to Top</a>
 	</div>
 </footer>
-{{ $custom := resources.Get "js/custom.js" }}
-{{ $prism := resources.Get "js/prism.js" }}
-{{ $js := (slice $custom $prism)| resources.Concat "js/bundle.js" | minify | fingerprint }}
-{{ $jsIntegrity := $js | resources.Fingerprint "sha512" }}
-<script async defer src="{{ $js.Permalink }}" integrity="{{ $jsIntegrity.Data.Integrity }}"></script>
+<script async defer src="{{ "js/main.js" | absURL }}"></script>
 
 {{ if .Params.katex }}
-{{ $katex := resources.Get "js/katex.js" | minify | fingerprint }}
-{{ $katexIntegrity := $katex | resources.Fingerprint "sha512" }}
-<script async defer src="{{ $katex.Permalink }}" integrity="{{ $katexIntegrity.Data.Integrity }}"></script>
+<script async defer src="{{ "js/katex.js" | absURL }}"></script>
 {{ end }}
-
 {{ if .Params.mermaid }}
-{{ $mermaid := resources.Get "js/mermaid.js" | minify | fingerprint }}
-{{ $mermaidIntegrity := $mermaid | resources.Fingerprint "sha512" }}
-<script async defer src="{{ $mermaid.Permalink }}" integrity="{{ $mermaidIntegrity.Data.Integrity }}"></script>
+<script async defer src="{{ "js/mermaid.js" | absURL }}"></script>
 {{ end }}

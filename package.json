@@ -1,21 +1,41 @@
 {
-	"name": "custom-pipeline",
-	"version": "0.1.0",
-	"description": "Minify HTML/CSS/JS",
-	"author": "Avneet Singh",
-	"devDependencies": {
-		"del": "latest",
-		"gulp": "latest",
-		"gulp-autoprefixer": "latest",
-		"gulp-csso": "latest",
-		"gulp-htmlmin": "latest",
-		"gulp-sass": "latest",
-		"gulp-uglify": "latest",
-		"run-sequence": "latest",
-		"gulp-dom": "latest",
-		"katex": "latest"
-	},
-	"engines": {
-		"node": ">=12.17.0"
-	}
+  "name": "custom-pipeline",
+  "version": "0.1.0",
+  "description": "Minify HTML/CSS/JS",
+  "author": "Avneet Singh",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "browserslist": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "latest",
+    "gulp-csso": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-debug": "latest",
+    "gulp-uglify": "latest",
+    "gulp-exec": "latest",
+    "fancy-log": "latest"
+  },
+  "engines": {
+    "node": ">=12.17.0"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvyChanna/blog.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvyChanna/blog/issues"
+  },
+  "homepage": "https://github.com/AvyChanna/blog#readme",
+  "browserslist": [
+    "defaults"
+  ]
 }

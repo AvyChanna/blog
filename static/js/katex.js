@@ -8564,6 +8564,7 @@
 	}]).default
 });
 ! function (e, t) {
+	console.log(t);
 	"object" == typeof exports && "object" == typeof module ? module.exports = t(require("katex")) : "function" == typeof define && define.amd ? define(["katex"], t) : "object" == typeof exports ? exports.renderMathInElement = t(require("katex")) : e.renderMathInElement = t(e.katex)
 }("undefined" != typeof self ? self : this, function (e) {
 	return function (e) {
